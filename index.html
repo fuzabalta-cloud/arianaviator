@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050505">
+<title>Ariana - Radar I.A | IA gratis para Aviator</title>
+<meta name="description" content="Accede a la versión gratis de mi inteligencia artificial que envía entradas para Aviator. Solo 50 cupos.">
+<meta property="og:title" content="Ariana - Radar I.A | IA gratis para Aviator">
+<meta property="og:description" content="Solo 50 cupos para acceder a la versión gratis de mi IA que envía entradas para Aviator.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Manrope:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#050505;
+  --panel:#171717;
+  --text:#fff;
+  --muted:#d8d8d8;
+  --soft:#a5acb8;
+  --telegram:#229ed9;
+  --telegram-dark:#0088cc;
+  --telegram-light:#4cc9ff;
+  --line:rgba(255,255,255,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  min-height:100svh;
+  font-family:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  overflow-x:hidden;
+}
+a{color:inherit}
+.page{
+  position:relative;
+  min-height:100svh;
+  isolation:isolate;
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  padding:22px 24px 24px;
+}
+.page::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-3;
+  background-image:
+    linear-gradient(90deg,rgba(0,0,0,.86) 0%,rgba(0,0,0,.48) 42%,rgba(0,0,0,.20) 100%),
+    linear-gradient(180deg,rgba(0,0,0,.22) 0%,rgba(0,0,0,.48) 56%,rgba(0,0,0,.92) 100%),
+    url("mari-bot-assets/ariana-bg-aviator.png");
+  background-size:cover;
+  background-position:center 36%;
+}
+.page::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 24% 18%,rgba(34,158,217,.20),transparent 32%),
+    radial-gradient(circle at 78% 70%,rgba(255,255,255,.08),transparent 28%);
+}
+.shell{
+  width:min(1120px,100%);
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 392px;
+  gap:34px;
+  align-items:start;
+  padding-top:clamp(6px,2.2svh,24px);
+}
+.hero-copy{
+  max-width:660px;
+  padding:clamp(8px,1.8vw,20px) 0;
+}
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:14px;
+  padding:10px 14px;
+  border:1px solid rgba(34,158,217,.42);
+  border-radius:999px;
+  background:rgba(0,0,0,.34);
+  color:#dff6ff;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  box-shadow:0 0 34px rgba(34,158,217,.16);
+  backdrop-filter:blur(10px);
+}
+.badge-dot{
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:var(--telegram-light);
+  box-shadow:0 0 18px var(--telegram-light);
+}
+h1{
+  max-width:720px;
+  font-family:"Bebas Neue","Arial Narrow",Arial,sans-serif;
+  font-size:clamp(48px,7vw,92px);
+  line-height:.94;
+  letter-spacing:0;
+  font-weight:400;
+  text-transform:uppercase;
+  text-wrap:balance;
+  text-shadow:0 12px 40px rgba(0,0,0,.64);
+}
+.blue{
+  color:#7bddff;
+  text-shadow:0 0 30px rgba(34,158,217,.52);
+}
+.sub{
+  max-width:560px;
+  margin-top:14px;
+  color:var(--muted);
+  font-size:clamp(17px,2vw,22px);
+  line-height:1.35;
+  font-weight:700;
+  text-shadow:0 8px 28px rgba(0,0,0,.72);
+}
+.sub strong{color:#fff;font-weight:900}
+.limit{
+  display:inline-flex;
+  align-items:center;
+  margin-top:14px;
+  padding:10px 14px;
+  border-radius:8px;
+  background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.18);
+  color:#fff;
+  font-size:15px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  backdrop-filter:blur(8px);
+}
+.action-panel{
+  width:100%;
+  padding:20px;
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,.16);
+  background:rgba(18,18,18,.74);
+  box-shadow:0 28px 80px rgba(0,0,0,.48);
+  backdrop-filter:blur(18px);
+}
+.profile{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:18px;
+}
+.avatar-wrap{
+  position:relative;
+  width:76px;
+  height:76px;
+  flex:0 0 auto;
+}
+.avatar{
+  width:76px;
+  height:76px;
+  object-fit:cover;
+  object-position:61% 44%;
+  border-radius:50%;
+  border:3px solid rgba(255,255,255,.90);
+  box-shadow:0 14px 36px rgba(0,0,0,.42);
+}
+.check{
+  position:absolute;
+  right:-4px;
+  bottom:-2px;
+  width:29px;
+  height:29px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  color:#fff;
+  background:var(--telegram);
+  border:3px solid #151515;
+}
+.check svg{width:17px;height:17px}
+.profile-title{
+  display:block;
+  font-size:26px;
+  line-height:1.05;
+  font-weight:900;
+}
+.profile-user{
+  display:block;
+  margin-top:3px;
+  color:#d8d8d8;
+  font-size:15px;
+  font-weight:700;
+}
+.telegram-btn{
+  width:100%;
+  min-height:66px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  padding:18px 20px;
+  border:0;
+  border-radius:999px;
+  color:#fff;
+  background:linear-gradient(135deg,var(--telegram-dark),var(--telegram),#0aa7df);
+  font-size:18px;
+  font-weight:900;
+  line-height:1.15;
+  text-align:center;
+  text-decoration:none;
+  box-shadow:0 18px 42px rgba(0,136,204,.38),0 0 0 1px rgba(255,255,255,.10) inset;
+  transition:transform .22s ease,box-shadow .22s ease,filter .22s ease;
+  animation:pulse 2.2s ease-in-out infinite;
+}
+.telegram-btn:hover{
+  transform:translateY(-2px);
+  filter:saturate(1.08);
+  box-shadow:0 24px 58px rgba(0,136,204,.52),0 0 0 1px rgba(255,255,255,.18) inset;
+}
+.telegram-btn:active{transform:translateY(0) scale(.98)}
+.telegram-btn svg{
+  width:24px;
+  height:24px;
+  flex:0 0 auto;
+}
+.install{
+  margin-top:18px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+  text-align:center;
+}
+.install-title{
+  margin-bottom:14px;
+  font-size:16px;
+  line-height:1.35;
+  font-weight:900;
+}
+.stores{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.store-btn{
+  min-height:62px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:12px 14px;
+  border:1px solid rgba(255,255,255,.72);
+  border-radius:18px;
+  background:rgba(255,255,255,.13);
+  color:#fff;
+  text-decoration:none;
+  transition:background .2s ease,transform .2s ease,border-color .2s ease;
+}
+.store-btn:hover{
+  transform:translateY(-1px);
+  background:rgba(255,255,255,.20);
+  border-color:#fff;
+}
+.store-btn svg{
+  width:28px;
+  height:28px;
+  flex:0 0 auto;
+}
+.store-text{
+  display:block;
+  text-align:left;
+  line-height:1.04;
+  font-size:12px;
+  font-weight:700;
+}
+.store-name{
+  display:block;
+  margin-top:3px;
+  font-size:14px;
+  font-weight:900;
+  letter-spacing:.02em;
+  text-transform:uppercase;
+}
+.fineprint{
+  margin-top:14px;
+  color:var(--soft);
+  font-size:11px;
+  line-height:1.45;
+}
+@keyframes pulse{
+  0%,100%{box-shadow:0 18px 42px rgba(0,136,204,.34),0 0 0 1px rgba(255,255,255,.10) inset}
+  50%{box-shadow:0 22px 64px rgba(34,158,217,.62),0 0 0 1px rgba(255,255,255,.18) inset}
+}
+@media(max-width:860px){
+  .page{
+    align-items:stretch;
+    padding:8px 14px 16px;
+  }
+  .page::before{
+    background-image:
+      linear-gradient(180deg,rgba(0,0,0,.24) 0%,rgba(0,0,0,.44) 42%,rgba(0,0,0,.94) 100%),
+      linear-gradient(90deg,rgba(0,0,0,.36),rgba(0,0,0,.18)),
+      url("mari-bot-assets/ariana-bg-aviator.png");
+    background-position:54% top;
+  }
+  .shell{
+    min-height:calc(100svh - 24px);
+    grid-template-columns:1fr;
+    gap:0;
+    align-content:start;
+    padding-top:0;
+  }
+  .hero-copy{
+    max-width:100%;
+    padding-top:0;
+    padding-bottom:0;
+  }
+  h1{
+    font-size:clamp(36px,12.2vw,54px);
+    max-width:470px;
+  }
+  .sub{
+    max-width:440px;
+    margin-top:10px;
+    font-size:15px;
+  }
+  .action-panel{
+    margin-top:clamp(10px,4.8svh,42px);
+    padding:15px;
+    border-radius:18px;
+  }
+  .profile{margin-bottom:12px}
+  .avatar-wrap,.avatar{width:62px;height:62px}
+  .check{width:25px;height:25px}
+  .check svg{width:14px;height:14px}
+}
+@media(max-width:440px){
+  .page{padding:8px 8px 14px}
+  .badge{
+    margin-bottom:8px;
+    font-size:11px;
+    padding:8px 11px;
+  }
+  .hero-copy{padding-top:0}
+  h1{font-size:38px}
+  .sub{font-size:14px}
+  .limit{
+    margin-top:10px;
+    padding:9px 12px;
+    font-size:12px;
+  }
+  .action-panel{margin-top:clamp(10px,4svh,34px)}
+  .profile-title{font-size:21px}
+  .telegram-btn{
+    min-height:58px;
+    padding:14px 16px;
+    font-size:16px;
+  }
+  .stores{grid-template-columns:1fr}
+  .store-btn{min-height:58px}
+}
+</style>
+</head>
+<body>
+<main class="page">
+  <div class="shell">
+    <section class="hero-copy" aria-labelledby="main-title">
+      <div class="badge"><span class="badge-dot"></span> Acceso gratis por tiempo limitado</div>
+      <h1 id="main-title">Ten acceso a la versión gratis de mi <span class="blue">inteligencia artificial</span> que manda entradas en Aviator</h1>
+      <p class="sub">Recibe las alertas directamente en Telegram, copia y pega para tener <strong>RESULTADO</strong> hoy mismo.</p>
+      <div class="limit">Solo 50 cupos disponibles</div>
+    </section>
+
+    <aside class="action-panel" aria-label="Acceso por Telegram">
+      <div class="profile">
+        <div class="avatar-wrap">
+          <img class="avatar" src="mari-bot-assets/mari-expert-aviator.png" alt="Ariana, experta en Aviator">
+          <span class="check" aria-label="Perfil verificado">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          </span>
+        </div>
+        <div>
+          <span class="profile-title">ARIANA - RADAR I.A</span>
+          <span class="profile-user">@arianaaviator</span>
+        </div>
+      </div>
+
+      <!-- Cambiar este href por el enlace real de Telegram cuando este listo. -->
+      <a class="telegram-btn" href="https://t.me/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.944 2.667 18.904 18.04c-.23 1.16-1.61 1.6-2.47.78l-3.82-3.55-1.84 1.77c-.2.2-.37.37-.76.37l.27-3.86 7.03-6.35c.31-.27-.07-.42-.47-.15l-8.69 5.47-3.74-1.17c-1.13-.36-1.15-1.13.24-1.67l14.62-5.64c.68-.25 1.27.16 1.05 1.62z"/></svg>
+        <span>Habla conmigo en Telegram</span>
+      </a>
+
+      <div class="install">
+        <p class="install-title">¿No tienes Telegram? Descarga la app ahora:</p>
+        <div class="stores">
+          <a class="store-btn" href="https://play.google.com/store/apps/details?id=org.telegram.messenger" target="_blank" rel="noopener" aria-label="Descargar Telegram en Google Play">
+            <svg viewBox="0 0 28 30" fill="currentColor" aria-hidden="true"><path d="M2.4.72C1.62.3.82.37.33.88.12 1.1 0 1.45 0 1.86v26.28c0 .42.12.76.33.98.49.51 1.29.58 2.07.16l14.16-7.77-4.86-4.86L2.4.72Zm15.3 20.16 4.47-2.45c1.6-.88 1.6-2 0-2.87l-4.47-2.45-5.32 5.31 5.32 5.46Zm-4.61-6.17 4.93-4.93L2.92 1.5l10.17 13.21Zm0 1.58L2.92 28.5l15.1-8.28-4.93-3.93Z"/></svg>
+            <span class="store-text">Descarga en <span class="store-name">Google Play</span></span>
+          </a>
+          <a class="store-btn" href="https://apps.apple.com/app/telegram-messenger/id686449807" target="_blank" rel="noopener" aria-label="Descargar Telegram en Apple Store">
+            <svg viewBox="0 0 24 28" fill="currentColor" aria-hidden="true"><path d="M19.77 14.8c-.04-3.36 2.74-4.98 2.87-5.06-1.57-2.29-4-2.6-4.85-2.63-2.04-.21-4.02 1.22-5.06 1.22-1.07 0-2.68-1.2-4.42-1.16-2.24.03-4.34 1.33-5.49 3.36-2.35 4.07-.6 10.05 1.65 13.34 1.13 1.61 2.45 3.42 4.18 3.36 1.69-.07 2.32-1.08 4.36-1.08 2.02 0 2.61 1.08 4.38 1.04 1.82-.03 2.97-1.62 4.05-3.25 1.31-1.84 1.83-3.66 1.85-3.75-.04-.01-3.49-1.34-3.52-5.39ZM16.45 4.95c.9-1.13 1.52-2.66 1.35-4.22-1.3.06-2.92.9-3.85 2.01-.83.97-1.58 2.57-1.38 4.07 1.47.11 2.94-.74 3.88-1.86Z"/></svg>
+            <span class="store-text">Descarga en <span class="store-name">Apple Store</span></span>
+          </a>
+        </div>
+        <p class="fineprint">Juego exclusivo para mayores de 18 años. Juega con responsabilidad.</p>
+      </div>
+    </aside>
+  </div>
+</main>
+</body>
+</html>
