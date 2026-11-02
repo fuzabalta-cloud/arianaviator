@@ -164,8 +164,25 @@ footer p{max-width:720px;margin:6px auto}
   .cta{font-size:16px;padding:16px 22px}
 }
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1679791369753216');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1679791369753216&ev=PageView&noscript=1"
+/></noscript>
 
 <div class="topbar">LIVE GRATIS · <b>Jueves 05/11 · 20h</b> (ARG/CHI) · Solo 50 cupos</div>
 
@@ -342,6 +359,19 @@ footer p{max-width:720px;margin:6px auto}
     var f = new Intl.DateTimeFormat('es', { weekday:'long', day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit' });
     document.getElementById('local-time').textContent = f.format(new Date(target));
   } catch(e) {}
+})();
+</script>
+<script>
+// Meta Pixel: evento Lead ao clicar em qualquer botão do grupo do WhatsApp (1x por visita)
+(function(){
+  var sent=false;
+  document.querySelectorAll('a[href*="chat.whatsapp.com"]').forEach(function(a){
+    a.addEventListener('click',function(){
+      if(sent||typeof fbq!=='function')return;
+      sent=true;
+      fbq('track','Lead',{content_name:'Grupo WhatsApp Black Ariana'});
+    });
+  });
 })();
 </script>
 </body>
